@@ -2,7 +2,7 @@ import os
 from pyVPRM.lib.flux_tower_class import fluxnet, icos
 from pyVPRM.sat_managers.viirs import VIIRS
 from pyVPRM.sat_managers.modis import modis
-from pyVPRM.VPRM import vprm 
+from pyVPRM.VPRM import vprm_preprocessor
 import xarray as xr
 import pickle
 import yaml
