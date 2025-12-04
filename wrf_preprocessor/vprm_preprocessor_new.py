@@ -4,7 +4,7 @@ from pyVPRM.sat_managers.viirs import VIIRS
 from pyVPRM.sat_managers.modis import modis
 from pyVPRM.sat_managers.copernicus import copernicus_land_cover_map
 from pyVPRM.lib.functions import lat_lon_to_modis, add_corners_to_1d_grid, parse_wrf_grid_file
-from pyVPRM.VPRM import vprm
+from pyVPRM.VPRM import vprm_preprocessor
 import yaml
 import glob
 import time
