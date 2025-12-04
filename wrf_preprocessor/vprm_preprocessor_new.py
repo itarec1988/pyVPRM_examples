@@ -71,7 +71,7 @@ for c, i in enumerate(hvs):
     if len(file_collections) == 0:
         continue
 
-    new_inst = vprm(vprm_config_path = os.path.join(pyVPRM.__path__[0], 
+    new_inst = vprm_preprocessor(vprm_config_path = os.path.join(pyVPRM.__path__[0], 
                                                     'vprm_configs/copernicus_land_cover_wrf.yaml') ,
                     n_cpus=args.n_cpus)
     for c0, fpath in enumerate(file_collections):
