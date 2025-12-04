@@ -4,7 +4,7 @@ import pyVPRM
 from pyVPRM.sat_managers.viirs import VIIRS
 from pyVPRM.sat_managers.modis import modis
 from pyVPRM.sat_managers.copernicus import copernicus_land_cover_map
-from pyVPRM.VPRM import vprm 
+from pyVPRM.VPRM import vprm_preprocessor 
 from pyVPRM.meteorologies import era5_monthly_xr, era5_class_dkrz
 from pyVPRM.lib.functions import lat_lon_to_modis
 from pyVPRM.vprm_models import vprm_modified, vprm_base
