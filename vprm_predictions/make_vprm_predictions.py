@@ -7,7 +7,7 @@ from pyVPRM.sat_managers.copernicus import copernicus_land_cover_map
 from pyVPRM.VPRM import vprm_preprocessor 
 from pyVPRM.meteorologies import era5_monthly_xr, era5_class_dkrz
 from pyVPRM.lib.functions import lat_lon_to_modis
-from pyVPRM.vprm_models import vprm_modified, vprm_base
+from pyVPRM.vprm_models import vprm_modified_model, vprm_base_model
 import glob
 import time
 import yaml
@@ -146,7 +146,7 @@ era5_inst = era5_monthly_xr.met_data_handler(args.year, 1, 1, 0,
 with open(cfg['vprm_params_dict'], 'rb') as ifile:
     res_dict = pickle.load(ifile)
 
-vprm_model = vprm_base.vprm_base(vprm_pre=vprm_inst,
+vprm_model = vprm_base_model.vprm_base_model(vprm_pre=vprm_inst,
                                  met=era5_inst,
                                  fit_params_dict= res_dict)
     
