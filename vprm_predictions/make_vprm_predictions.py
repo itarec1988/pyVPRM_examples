@@ -77,6 +77,8 @@ for c, i in enumerate(sorted(files)):
     if cfg['satellite'] == 'modis':
         handler = modis(sat_image_path=i)
         handler.load()
+        if handler.sat_img.rio.crs is None:
+            handler.sat_img = handler.sat_img.rio.set_crs(handler.default_crs_str)
         vprm_inst.add_sat_img(handler, b_nir='sur_refl_b02', b_red='sur_refl_b01',
                               b_blue='sur_refl_b03', b_swir='sur_refl_b06',
                               which_evi='evi',
@@ -87,6 +89,8 @@ for c, i in enumerate(sorted(files)):
     else:
         handler = VIIRS(sat_image_path=i)
         handler.load()
+        if handler.sat_img.rio.crs is None:
+            handler.sat_img = handler.sat_img.rio.set_crs(handler.default_crs_str)
         vprm_inst.add_sat_img(handler, b_nir='SurfReflect_I2', b_red='SurfReflect_I1',
                               b_blue='no_blue_sensor', b_swir='SurfReflect_I3',
                               which_evi='evi2', 
