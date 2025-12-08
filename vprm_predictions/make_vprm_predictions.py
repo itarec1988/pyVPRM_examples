@@ -112,7 +112,7 @@ for c in glob.glob(os.path.join(cfg['copernicus_path'], '*')):
     # Generate a copernicus_land_cover_map instance
     thandler = copernicus_land_cover_map(c)
     thandler.load()
-    bounds = vprm_inst.prototype.sat_img.rio.transform_bounds(thandler.sat_img.rio.crs)
+    bounds = vprm_inst.prototype_satellite_manager.sat_img.rio.transform_bounds(thandler.sat_img.rio.crs)
 
     # Check overlap with our satellite images
     dj = rasterio.coords.disjoint_bounds(bounds, thandler.sat_img.rio.bounds())
