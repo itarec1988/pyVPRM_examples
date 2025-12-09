@@ -66,7 +66,7 @@ for c, i in enumerate(hvs):
         
     #Note: There is no need to convert MODIS HDF4 into Netcdf files. You can also use HDF4 files directly.
     file_collections = glob.glob(os.path.join(cfg['sat_image_path'], 
-                                                 '*h{:02d}v{:02d}*.nc'.format(i[0], i[1])))
+                                                 '*h{:02d}v{:02d}*.hdf'.format(i[0], i[1])))
     
     if len(file_collections) == 0:
         continue
