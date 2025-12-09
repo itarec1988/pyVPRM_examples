@@ -67,7 +67,7 @@ vprm_inst = vprm_preprocessor(vprm_config_path=os.path.join(pyVPRM.__path__[0], 
 
 #Note: There is no need to convert HDF4 into Netcdf files. You can also use HDF4 files directly.
 files = glob.glob(os.path.join(cfg['sat_image_path'],# str(args.year),
-                               '*h{:02d}v{:02d}*.nc'.format(h, v)))
+                               '*h{:02d}v{:02d}*.hdf'.format(h, v)))
 
 # Add satellite images to the VPRM instance
 for c, i in enumerate(sorted(files)):
