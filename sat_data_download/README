@@ -1,0 +1,13 @@
+How to use the lads_downloader.py
+- modify the config.yaml for your start and end download period of interest
+- create a token.txt with the token you will get from: https://urs.earthdata.nasa.gov copy the string without the word "bearer" in the first line of the txt
+- run the gen_tasks.py
+	- beware of modifying the sys.path.append("/work/mj0143/b301034/Scrapbook_Analysis/Projects/pyVPRM/pyVPRM") 
+- go to: download_modis_new_parallel.py and modify also the sys.path.append("/work/mj0143/b301034/Scrapbook_Analysis/Projects/pyVPRM/pyVPRM")
+- the previous two steps are not needed if you have pyVPRM installed in your environment
+- mkdir logs
+- run then the download_modis_new_submit.sh 
+	- modify the:
+		- OUTPUT_DIR
+ 
+ 
