@@ -7,7 +7,7 @@
 #SBATCH --time=04:00:00
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4        # threads per job
-##SBATCH --mem=8G
+#SBATCH --mem=8G
 
 source /work/mj0143/b301034/anaconda3/etc/profile.d/conda.sh 
 conda activate pyVPRM 

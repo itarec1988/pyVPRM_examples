@@ -2,6 +2,7 @@
 
 import json, yaml
 import sys
+import os
 from datetime import datetime
 sys.path.append("/work/mj0143/b301034/Scrapbook_Analysis/Projects/pyVPRM/pyVPRM")
 from sat_managers.lads_downloader import EarthdataLAADS
@@ -27,5 +28,7 @@ if __name__ == "__main__":
     tasks = generate_tile_year_tasks(config)
     with open("tasklist_tile_year.json","w") as fo:
         json.dump(tasks, fo, indent=2)
-    print("Wrote tasklist_tile_year.json, total:", len(tasks))
-
+    #print("Wrote tasklist_tile_year.json, total:", len(tasks))
+    # Set environment variable N for current shell session
+    os.environ["N"] = str(len(tasks))
+    print(len(tasks))
