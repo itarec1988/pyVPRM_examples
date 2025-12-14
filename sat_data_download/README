@@ -1,4 +1,10 @@
 How to use the lads_downloader.py
+- create and environment (pyVPRM) following: 
+	conda config --add channels conda-forge
+	conda config --set channel_priority strict
+	conda install -c conda-forge dask netCDF4
+	conda install esmf
+	conda install esmpy
 - modify the config.yaml:
 	- set the start and end dates for the period of interest
 	- add the list of tiles you want to download
